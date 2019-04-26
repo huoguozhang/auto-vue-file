@@ -1,0 +1,15 @@
+#! /usr/bin/env node
+const chalk = require('chalk')
+const path = require('path')
+const resolve = (project, ...file) => path.resolve(project, ...file)
+
+const fs = require('fs')
+function copyFile(src, dist) {
+  fs.writeFileSync(dist, fs.readFileSync(src))
+}
+function initTemplate () {
+  const userProjectDirectory = process.cwd()
+  copyFile(resolve(__dirname, '../scripts/template.js'), resolve(userProjectDirectory, 'auto-vue-file.template.js'))
+  console.log(chalk.green('生成配置文件成功,在您项目根目录：auto-vue-file.template.js'))
+}
+module.exports = { initTemplate }

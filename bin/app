@@ -1,0 +1,25 @@
+#! /usr/bin/env node
+var program = require('commander');
+var package = require('../package.json')
+const chalk = require('chalk')
+const { createView } = require('../scripts/generateView')
+const { createComp } = require('../scripts/generateComponent')
+const { initTemplate } = require('./init')
+program
+  .version(package.version, '-v, --version')
+  .option('-c, --component', 'create vue component file in components dir')
+  .option('-p, --page', 'create vue page file in views dir' )
+  .option('--path [value]', 'create vue page or component file in this dir')
+  .option('--init', 'create auto-vue-file template file: auto-vue-file.template.js')
+  .parse(process.argv);
+  const targetPath = program.path
+  if (program.init) {
+    initTemplate()
+  } else if (program.component) {
+    createComp(targetPath)
+  } else if (program.page) {
+    createView(targetPath)
+  } else if (!program.component && !program.page) {
+    console.log(chalk.red('unknow command, option -c or -p must be give'))
+    console.log(chalk.blue('example : auto-vue-file -p'))
+  }

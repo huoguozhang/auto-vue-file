@@ -1,0 +1,24 @@
+{
+  "name": "auto-vue-file",
+  "version": "1.0.0",
+  "description": "auto generate vue view or component  *.vue file",
+  "main": "bin/app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "efficient",
+    "auto vue file",
+    "auto generate vue file"
+  ],
+  "author": "huoguozhang",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0"
+  },
+  "bin": {
+    "auto-vue-file": "bin/app"
+  }
+}
