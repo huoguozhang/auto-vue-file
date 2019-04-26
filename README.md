@@ -74,7 +74,7 @@ npm install auto-vue-file -g
 ![image.png](https://upload-images.jianshu.io/upload_images/6036420-cbc01e3f811b4210.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 这样在components目录下面生成myForm文件
 
-####参数说明：
+#### 参数说明：
 
 名称 | 说明 | 使用例子 
 ---- | ---  | ---
@@ -82,7 +82,7 @@ component | 创建一个vue组件, 默认在components目录下面 | auto-vue-fi
 page |  创建一个vue组件，默认在views目录 | auto-vue-file -p 或 auto-vue-file --page
 path |  在指定目录创建vue组件，需要提供-c或-p参数|  auto-vue-file -c --path ./src/haha 或  auto-vue-file -p --path ./src/haha
 
-####更多：
+#### 更多：
 
 你也可以使用自己的vue模版文件，文件名为auto-vue-file.template.js，存放在项目根目录下面，内容如下
 
