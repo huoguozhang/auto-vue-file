@@ -1,6 +1,6 @@
 {
   "name": "auto-vue-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "auto generate vue view or component  *.vue file",
   "main": "bin/app",
   "scripts": {

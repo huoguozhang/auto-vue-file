@@ -125,4 +125,6 @@ auto-vue-file --init
 
 然后改成你自己需要的样子。
 
+[github](https://github.com/huoguozhang/auto-vue-file)
+
 
